@@ -135,8 +135,6 @@ function App() {
 		setError('');
 		setIsLoading(true);
 
-		const port = process.env.PORT
-
 		try {
 			const response = await fetch(
 				`https://geminibot-cj0r.onrender.com/gemini/ask`,
