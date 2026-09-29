@@ -138,11 +138,14 @@ function App() {
 		const port = process.env.PORT
 
 		try {
-			const response = await fetch(`${port}gemini/ask`, {
-				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({ question: newMessages }),
-			});
+			const response = await fetch(
+				`https://geminibot-cj0r.onrender.com/gemini/ask`,
+				{
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({ question: newMessages }),
+				},
+			);
 			const data = await response.json();
 
 			if (!response.ok)
